@@ -1,13 +1,13 @@
 window.addEventListener('DOMContentLoaded', function () {
 
     let age = document.getElementById('age');
- 
-    function showUser(surname, name,value) {
-             alert("Пользователь " + surname + " " + name + ", его возраст " +  age.value);
+
+
+    function showUser(surname, name) {
+        alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
     }
-     
-    showUser('shakhov', 'kiril' );
-    
+
+    showUser.call(age, 'kirill' , 'shakhov' );
 
 
 
